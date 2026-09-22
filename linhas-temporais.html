@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Linhas Temporais — projeto.nosk</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    background:#050505;
+    color:#eee;
+    font-family:monospace;
+}
+
+header{
+    padding:30px 7%;
+    border-bottom:1px solid #222;
+    display:flex;
+    justify-content:space-between;
+}
+
+a{
+    color:#777;
+    text-decoration:none;
+}
+
+a:hover{color:#a66cff}
+
+main{
+    padding:90px 7%;
+}
+
+.number{
+    color:#666;
+    letter-spacing:3px;
+}
+
+h1{
+    font-size:clamp(45px,8vw,100px);
+    margin:25px 0;
+}
+
+.subtitle{
+    color:#777;
+    max-width:600px;
+    line-height:1.8;
+    margin-bottom:100px;
+}
+
+.timeline{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:#333;
+}
+
+.event{
+    width:50%;
+    padding:30px 50px;
+    position:relative;
+}
+
+.event:nth-child(even){
+    margin-left:50%;
+}
+
+.dot{
+    position:absolute;
+    width:12px;
+    height:12px;
+    border:2px solid #a66cff;
+    background:#050505;
+    border-radius:50%;
+    top:40px;
+}
+
+.event:nth-child(odd) .dot{
+    right:-6px;
+}
+
+.event:nth-child(even) .dot{
+    left:-6px;
+}
+
+.event-box{
+    border:1px solid #222;
+    padding:25px;
+    transition:.3s;
+}
+
+.event-box:hover{
+    border-color:#a66cff;
+}
+
+.event h2{
+    margin:10px 0;
+}
+
+.event p{
+    color:#777;
+    line-height:1.7;
+}
+
+footer{
+    margin-top:100px;
+    padding:30px 7%;
+    border-top:1px solid #222;
+    color:#555;
+}
+
+@media(max-width:600px){
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .event,
+    .event:nth-child(even){
+        width:100%;
+        margin-left:0;
+        padding-left:40px;
+    }
+
+    .event .dot,
+    .event:nth-child(odd) .dot,
+    .event:nth-child(even) .dot{
+        left:4px;
+        right:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <strong>projeto<span style="color:#666">.nosk</span></strong>
+    <a href="../Nosk.html">← voltar</a>
+</header>
+
+<main>
+
+<div class="number">03 / LINHAS TEMPORAIS</div>
+
+<h1>O TEMPO<br>QUEBRADO.</h1>
+
+<p class="subtitle">
+    Toda escolha cria uma possibilidade.
+    Toda possibilidade cria uma linha.
+    Nem todas as linhas deveriam existir.
+</p>
+
+<section class="timeline">
+
+    <article class="event">
+
+        <div class="dot"></div>
+
+        <div class="event-box">
+
+            <small>LINHA 01</small>
+
+            <h2>O INÍCIO</h2>
+
+            <p>
+                A primeira versão dos acontecimentos.
+                Tudo ainda parece normal.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="event">
+
+        <div class="dot"></div>
+
+        <div class="event-box">
+
+            <small>LINHA 02</small>
+
+            <h2>A RUPTURA</h2>
+
+            <p>
+                Algo aconteceu.
+                A partir daqui, as linhas deixam
+                de seguir o mesmo caminho.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="event">
+
+        <div class="dot"></div>
+
+        <div class="event-box">
+
+            <small>LINHA 03</small>
+
+            <h2>O OUTRO CAMINHO</h2>
+
+            <p>
+                Uma versão diferente da mesma história.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="event">
+
+        <div class="dot"></div>
+
+        <div class="event-box">
+
+            <small>LINHA ???</small>
+
+            <h2>DESCONHECIDA</h2>
+
+            <p>
+                O arquivo não possui informações
+                suficientes para determinar o que ocorreu.
+            </p>
+
+        </div>
+
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+projeto.nosk // temporal archive
+</footer>
+
+</body>
+</html>
